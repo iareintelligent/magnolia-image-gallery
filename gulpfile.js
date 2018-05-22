@@ -8,7 +8,7 @@ var gulp = require("gulp"),
     // gulp doesnt try to compile the partials except as indicted by the @import statements
     htmlSources = ["*.html"],
     jsSources = ["*.js"],
-    sassInput = "./sass/*.scss",
+    sassInput = "*.scss",
     cssOutput = "./assets/",
     sassOptions = {
         errLogToConsole: true,
@@ -22,7 +22,7 @@ gulp.task("sass", function() {
         .pipe(sass(sassOptions).on("error", sass.logError))
         .pipe(sourcemaps.write())
         .pipe(autoprefixer({ browsers: "> 1%, since 2013" }))
-        .pipe(rename("css-builtBySass.css.liquid"))
+        .pipe(rename("css-builtBySass.css"))
         .pipe(gulp.dest(cssOutput))
         .pipe(connect.reload())
         .resume();
