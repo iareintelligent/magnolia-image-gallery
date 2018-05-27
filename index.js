@@ -14,15 +14,7 @@ $(".slider-for").slick({
     adaptiveHeight: true,
     asNavFor: ".slider-nav"
 });
-$(".slider-nav").slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    asNavFor: ".slider-for",
-    dots: false,
-    centerMode: true,
-    focusOnSelect: true
-});
-$("#imageModal").on("shown.bs.modal", function(e) {
-    $(".slider-for, .slider-nav").resize();
-    $(".slider-for, .slider-nav")[0].slick.setPosition();
+$("#imgDropdown").on("shown.bs.collapse", function(e) {
+    $(".slider-for").resize();
+    $(".slider-for")[0].slick.setPosition();
 });

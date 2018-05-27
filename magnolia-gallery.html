@@ -12,204 +12,144 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
-    <link rel="stylesheet" href="/assets/css-builtBySass.css">
 
 </head>
 
 <body>
+    <style>
+        #imgDropdown.collapse.show {
+            display: flex !important;
+        }
+    </style>
     <div class="container-fluid my-3">
-        <div class="row">
+        <div class="row position-relative">
             <div class="col-12 col-sm-3"></div>
-            <div class="col-12 col-sm-9">
-                <div class="row no-gutters">
-                    <div class="col pr-1 mb-1 image-gallery" data-toggle="modal" data-target="#imageMod">
-                        <img type="button" class="img-fluid modal-img hvr-shrink" data-toggle="modal" data-target="#imageModal" src="/img/1a.jpg"
-                            alt="first image" />
-                    </div>
-                    <div class="col pr-1 mb-1 image-gallery" data-toggle="modal" data-target="#imageMod">
-                        <img type="button" class="img-fluid modal-img hvr-shrink" data-toggle="modal" data-target="#imageModal" src="/img/1b.jpg"
-                            alt="first image" />
-                    </div>
-                    <div class="col pr-1 mb-1 image-gallery" data-toggle="modal" data-target="#imageMod">
-                        <img type="button" class="img-fluid modal-img hvr-shrink" data-toggle="modal" data-target="#imageModal" src="/img/1c.jpg"
-                            alt="first image" />
-                    </div>
-                    <div class="col pr-1 mb-1 image-gallery" data-toggle="modal" data-target="#imageMod">
-                        <img type="button" class="img-fluid modal-img hvr-shrink" data-toggle="modal" data-target="#imageModal" src="/img/1d.jpg"
-                            alt="first image" />
-                    </div>
-                </div>
-                <div class="row no-gutters">
-                    <div class="col pr-1 mb-1 image-gallery" data-toggle="modal" data-target="#imageMod">
-                        <img type="button" class="img-fluid modal-img hvr-shrink" data-toggle="modal" data-target="#imageModal" src="/img/2a.jpg"
-                            alt="first image" />
-                    </div>
-                    <div class="col pr-1 mb-1 image-gallery" data-toggle="modal" data-target="#imageMod">
-                        <img type="button" class="img-fluid modal-img hvr-shrink" data-toggle="modal" data-target="#imageModal" src="/img/2b.jpg"
-                            alt="first image" />
-                    </div>
-                    <div class="col pr-1 mb-1 image-gallery" data-toggle="modal" data-target="#imageMod">
-                        <img type="button" class="img-fluid modal-img hvr-shrink" data-toggle="modal" data-target="#imageModal" src="/img/2c.jpg"
-                            alt="first image" />
-                    </div>
-                    <div class="col pr-1 mb-1 image-gallery" data-toggle="modal" data-target="#imageMod">
-                        <img type="button" class="img-fluid modal-img hvr-shrink" data-toggle="modal" data-target="#imageModal" src="/img/2d.jpg"
-                            alt="first image" />
-                    </div>
-                </div>
-                <div class="row no-gutters">
-                    <div class="col pr-1 mb-1 image-gallery" data-toggle="modal" data-target="#imageMod">
-                        <img type="button" class="img-fluid modal-img hvr-shrink" data-toggle="modal" data-target="#imageModal" src="/img/3a.jpg"
-                            alt="first image" />
-                    </div>
-                    <div class="col pr-1 mb-1 image-gallery" data-toggle="modal" data-target="#imageMod">
-                        <img type="button" class="img-fluid modal-img hvr-shrink" data-toggle="modal" data-target="#imageModal" src="/img/3b.jpg"
-                            alt="first image" />
-                    </div>
-                    <div class="col pr-1 mb-1 image-gallery" data-toggle="modal" data-target="#imageMod">
-                        <img type="button" class="img-fluid modal-img hvr-shrink" data-toggle="modal" data-target="#imageModal" src="/img/3c.jpg"
-                            alt="first image" />
-                    </div>
-                    <div class="col pr-1 mb-1 image-gallery" data-toggle="modal" data-target="#imageMod">
-                        <img type="button" class="img-fluid modal-img hvr-shrink" data-toggle="modal" data-target="#imageModal" src="/img/3d.jpg"
-                            alt="first image" />
-                    </div>
-                </div>
-                <div class="row no-gutters">
-                    <div class="col pr-1 mb-1 image-gallery" data-toggle="modal" data-target="#imageMod">
-                        <img type="button" class="img-fluid modal-img hvr-shrink" data-toggle="modal" data-target="#imageModal" src="/img/4a.jpg"
-                            alt="first image" />
-                    </div>
-                    <div class="col pr-1 mb-1 image-gallery" data-toggle="modal" data-target="#imageMod">
-                        <img type="button" class="img-fluid modal-img hvr-shrink" data-toggle="modal" data-target="#imageModal" src="/img/4b.jpg"
-                            alt="first image" />
-                    </div>
-                    <div class="col pr-1 mb-1 image-gallery" data-toggle="modal" data-target="#imageMod">
-                        <img type="button" class="img-fluid modal-img hvr-shrink" data-toggle="modal" data-target="#imageModal" src="/img/4c.jpg"
-                            alt="first image" />
-                    </div>
-                    <div class="col pr-1 mb-1 image-gallery" data-toggle="modal" data-target="#imageMod">
-                        <img type="button" class="img-fluid modal-img hvr-shrink" data-toggle="modal" data-target="#imageModal" src="/img/4d.jpg"
-                            alt="first image" />
+            <div class="col-12 position-absolute">
+                <div class="row px-3 collapse justify-content-end" id="imgDropdown">
+                    <div class="col-12 col-sm-9 slider-for">
+                        <div class="image-modal">
+                            <img type="button" class="img-fluid" src="/img/1a.jpg" alt="first image" />
+                        </div>
+                        <div class="image-modal">
+                            <img type="button" class="img-fluid" src="/img/1b.jpg" alt="first image" />
+                        </div>
+                        <div class="image-modal">
+                            <img type="button" class="img-fluid" src="/img/1c.jpg" alt="first image" />
+                        </div>
+                        <div class="image-modal">
+                            <img type="button" class="img-fluid" src="/img/1d.jpg" alt="first image" />
+                        </div>
+                        <div class="image-modal">
+                            <img type="button" class="img-fluid" src="/img/2a.jpg" alt="first image" />
+                        </div>
+                        <div class="image-modal">
+                            <img type="button" class="img-fluid" src="/img/2b.jpg" alt="first image" />
+                        </div>
+                        <div class="image-modal">
+                            <img type="button" class="img-fluid" src="/img/2c.jpg" alt="first image" />
+                        </div>
+                        <div class="image-modal">
+                            <img type="button" class="img-fluid" src="/img/2d.jpg" alt="first image" />
+                        </div>
+                        <div class="image-modal">
+                            <img type="button" class="img-fluid" src="/img/3a.jpg" alt="first image" />
+                        </div>
+                        <div class="image-modal">
+                            <img type="button" class="img-fluid" src="/img/3b.jpg" alt="first image" />
+                        </div>
+                        <div class="image-modal">
+                            <img type="button" class="img-fluid" src="/img/3c.jpg" alt="first image" />
+                        </div>
+                        <div class="image-modal">
+                            <img type="button" class="img-fluid" src="/img/3d.jpg" alt="first image" />
+                        </div>
+                        <div class="image-modal">
+                            <img type="button" class="img-fluid" src="/img/4a.jpg" alt="first image" />
+                        </div>
+                        <div class="image-modal">
+                            <img type="button" class="img-fluid" src="/img/4b.jpg" alt="first image" />
+                        </div>
+                        <div class="image-modal">
+                            <img type="button" class="img-fluid" src="/img/4c.jpg" alt="first image" />
+                        </div>
+                        <div class="image-modal">
+                            <img type="button" class="img-fluid" src="/img/4d.jpg" alt="first image" />
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="sr-only" id="imageModalLabel">Magnolia Image Gallery</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+            <div class="col-12 col-sm-9">
+                <div class="row no-gutters">
+                    <div class="col pr-1 mb-1 image-gallery">
+                        <img type="button" class="img-fluid modal-img" data-toggle="collapse" href="#imgDropdown" role="button" aria-expanded="false"
+                            aria-controls="imgDropdown" src="/img/1a.jpg" alt="first image" />
                     </div>
-                    <div class="modal-body">
-                        <div class="slider-for col-12">
-                            <div class="col pr-1 mb-1 image-modal">
-                                <img type="button" class="img-fluid" src="/img/1a.jpg" alt="first image" />
-                            </div>
-                            <div class="col pr-1 mb-1 image-modal">
-                                <img type="button" class="img-fluid" src="/img/1b.jpg" alt="first image" />
-                            </div>
-                            <div class="col pr-1 mb-1 image-modal">
-                                <img type="button" class="img-fluid" src="/img/1c.jpg" alt="first image" />
-                            </div>
-                            <div class="col pr-1 mb-1 image-modal">
-                                <img type="button" class="img-fluid" src="/img/1d.jpg" alt="first image" />
-                            </div>
-                            <div class="col pr-1 mb-1 image-modal">
-                                <img type="button" class="img-fluid" src="/img/2a.jpg" alt="first image" />
-                            </div>
-                            <div class="col pr-1 mb-1 image-modal">
-                                <img type="button" class="img-fluid" src="/img/2b.jpg" alt="first image" />
-                            </div>
-                            <div class="col pr-1 mb-1 image-modal">
-                                <img type="button" class="img-fluid" src="/img/2c.jpg" alt="first image" />
-                            </div>
-                            <div class="col pr-1 mb-1 image-modal">
-                                <img type="button" class="img-fluid" src="/img/2d.jpg" alt="first image" />
-                            </div>
-                            <div class="col pr-1 mb-1 image-modal">
-                                <img type="button" class="img-fluid" src="/img/3a.jpg" alt="first image" />
-                            </div>
-                            <div class="col pr-1 mb-1 image-modal">
-                                <img type="button" class="img-fluid" src="/img/3b.jpg" alt="first image" />
-                            </div>
-                            <div class="col pr-1 mb-1 image-modal">
-                                <img type="button" class="img-fluid" src="/img/3c.jpg" alt="first image" />
-                            </div>
-                            <div class="col pr-1 mb-1 image-modal">
-                                <img type="button" class="img-fluid" src="/img/3d.jpg" alt="first image" />
-                            </div>
-                            <div class="col pr-1 mb-1 image-modal">
-                                <img type="button" class="img-fluid" src="/img/4a.jpg" alt="first image" />
-                            </div>
-                            <div class="col pr-1 mb-1 image-modal">
-                                <img type="button" class="img-fluid" src="/img/4b.jpg" alt="first image" />
-                            </div>
-                            <div class="col pr-1 mb-1 image-modal">
-                                <img type="button" class="img-fluid" src="/img/4c.jpg" alt="first image" />
-                            </div>
-                            <div class="col pr-1 mb-1 image-modal">
-                                <img type="button" class="img-fluid" src="/img/4d.jpg" alt="first image" />
-                            </div>
-                        </div>
-                        <div class="slider-nav col-12">
-                            <div class="col pr-1 mb-1 image-modal">
-                                <img type="button" class="img-fluid img-thumbnail" src="/img/1a.jpg" alt="first image" />
-                            </div>
-                            <div class="col pr-1 mb-1 image-modal">
-                                <img type="button" class="img-fluid img-thumbnail" src="/img/1b.jpg" alt="first image" />
-                            </div>
-                            <div class="col pr-1 mb-1 image-modal">
-                                <img type="button" class="img-fluid img-thumbnail" src="/img/1c.jpg" alt="first image" />
-                            </div>
-                            <div class="col pr-1 mb-1 image-modal">
-                                <img type="button" class="img-fluid img-thumbnail" src="/img/1d.jpg" alt="first image" />
-                            </div>
-                            <div class="col pr-1 mb-1 image-modal">
-                                <img type="button" class="img-fluid img-thumbnail" src="/img/2a.jpg" alt="first image" />
-                            </div>
-                            <div class="col pr-1 mb-1 image-modal">
-                                <img type="button" class="img-fluid img-thumbnail" src="/img/2b.jpg" alt="first image" />
-                            </div>
-                            <div class="col pr-1 mb-1 image-modal">
-                                <img type="button" class="img-fluid img-thumbnail" src="/img/2c.jpg" alt="first image" />
-                            </div>
-                            <div class="col pr-1 mb-1 image-modal">
-                                <img type="button" class="img-fluid img-thumbnail" src="/img/2d.jpg" alt="first image" />
-                            </div>
-                            <div class="col pr-1 mb-1 image-modal">
-                                <img type="button" class="img-fluid img-thumbnail" src="/img/3a.jpg" alt="first image" />
-                            </div>
-                            <div class="col pr-1 mb-1 image-modal">
-                                <img type="button" class="img-fluid img-thumbnail" src="/img/3b.jpg" alt="first image" />
-                            </div>
-                            <div class="col pr-1 mb-1 image-modal">
-                                <img type="button" class="img-fluid img-thumbnail" src="/img/3c.jpg" alt="first image" />
-                            </div>
-                            <div class="col pr-1 mb-1 image-modal">
-                                <img type="button" class="img-fluid img-thumbnail" src="/img/3d.jpg" alt="first image" />
-                            </div>
-                            <div class="col pr-1 mb-1 image-modal">
-                                <img type="button" class="img-fluid img-thumbnail" src="/img/4a.jpg" alt="first image" />
-                            </div>
-                            <div class="col pr-1 mb-1 image-modal">
-                                <img type="button" class="img-fluid img-thumbnail" src="/img/4b.jpg" alt="first image" />
-                            </div>
-                            <div class="col pr-1 mb-1 image-modal">
-                                <img type="button" class="img-fluid img-thumbnail" src="/img/4c.jpg" alt="first image" />
-                            </div>
-                            <div class="col pr-1 mb-1 image-modal">
-                                <img type="button" class="img-fluid img-thumbnail" src="/img/4d.jpg" alt="first image" />
-                            </div>
-                        </div>
+                    <div class="col pr-1 mb-1 image-gallery">
+                        <img type="button" class="img-fluid modal-img" data-toggle="collapse" href="#imgDropdown" role="button" aria-expanded="false"
+                            aria-controls="imgDropdown" src="/img/1b.jpg" alt="first image" />
+                    </div>
+                    <div class="col pr-1 mb-1 image-gallery">
+                        <img type="button" class="img-fluid modal-img" data-toggle="collapse" href="#imgDropdown" role="button" aria-expanded="false"
+                            aria-controls="imgDropdown" src="/img/1c.jpg" alt="first image" />
+                    </div>
+                    <div class="col pr-1 mb-1 image-gallery">
+                        <img type="button" class="img-fluid modal-img" data-toggle="collapse" href="#imgDropdown" role="button" aria-expanded="false"
+                            aria-controls="imgDropdown" src="/img/1d.jpg" alt="first image" />
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button tyle="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <div class="row no-gutters">
+                    <div class="col pr-1 mb-1 image-gallery">
+                        <img type="button" class="img-fluid modal-img" data-toggle="collapse" href="#imgDropdown" role="button" aria-expanded="false"
+                            aria-controls="imgDropdown" src="/img/2a.jpg" alt="first image" />
+                    </div>
+                    <div class="col pr-1 mb-1 image-gallery">
+                        <img type="button" class="img-fluid modal-img" data-toggle="collapse" href="#imgDropdown" role="button" aria-expanded="false"
+                            aria-controls="imgDropdown" src="/img/2b.jpg" alt="first image" />
+                    </div>
+                    <div class="col pr-1 mb-1 image-gallery">
+                        <img type="button" class="img-fluid modal-img" data-toggle="collapse" href="#imgDropdown" role="button" aria-expanded="false"
+                            aria-controls="imgDropdown" src="/img/2c.jpg" alt="first image" />
+                    </div>
+                    <div class="col pr-1 mb-1 image-gallery">
+                        <img type="button" class="img-fluid modal-img" data-toggle="collapse" href="#imgDropdown" role="button" aria-expanded="false"
+                            aria-controls="imgDropdown" src="/img/2d.jpg" alt="first image" />
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col pr-1 mb-1 image-gallery">
+                        <img type="button" class="img-fluid modal-img" data-toggle="collapse" href="#imgDropdown" role="button" aria-expanded="false"
+                            aria-controls="imgDropdown" src="/img/3a.jpg" alt="first image" />
+                    </div>
+                    <div class="col pr-1 mb-1 image-gallery">
+                        <img type="button" class="img-fluid modal-img" data-toggle="collapse" href="#imgDropdown" role="button" aria-expanded="false"
+                            aria-controls="imgDropdown" src="/img/3b.jpg" alt="first image" />
+                    </div>
+                    <div class="col pr-1 mb-1 image-gallery">
+                        <img type="button" class="img-fluid modal-img" data-toggle="collapse" href="#imgDropdown" role="button" aria-expanded="false"
+                            aria-controls="imgDropdown" src="/img/3c.jpg" alt="first image" />
+                    </div>
+                    <div class="col pr-1 mb-1 image-gallery ">
+                        <img type="button" class="img-fluid modal-img " data-toggle="collapse " href="#imgDropdown" role="button" aria-expanded="false "
+                            aria-controls="imgDropdown " src="/img/3d.jpg " alt="first image " />
+                    </div>
+                </div>
+                <div class="row no-gutters ">
+                    <div class="col pr-1 mb-1 image-gallery ">
+                        <img type="button" class="img-fluid modal-img " data-toggle="collapse " href="#imgDropdown" role="button" aria-expanded="false "
+                            aria-controls="imgDropdown " src="/img/4a.jpg " alt="first image " />
+                    </div>
+                    <div class="col pr-1 mb-1 image-gallery ">
+                        <img type="button" class="img-fluid modal-img " data-toggle="collapse " href="#imgDropdown" role="button" aria-expanded="false "
+                            aria-controls="imgDropdown " src="/img/4b.jpg " alt="first image " />
+                    </div>
+                    <div class="col pr-1 mb-1 image-gallery ">
+                        <img type="button" class="img-fluid modal-img " data-toggle="collapse " href="#imgDropdown" role="button" aria-expanded="false "
+                            aria-controls="imgDropdown " src="/img/4c.jpg " alt="first image " />
+                    </div>
+                    <div class="col pr-1 mb-1 image-gallery ">
+                        <img type="button" class="img-fluid modal-img " data-toggle="collapse " href="#imgDropdown" role="button" aria-expanded="false "
+                            aria-controls="imgDropdown " src="/img/4d.jpg " alt="first image " />
+                    </div>
                 </div>
             </div>
         </div>
@@ -223,14 +163,14 @@
     </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js " integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin=" anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js " integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh "
+        crossorigin="anonymous "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js " integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ "
+        crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js "></script>
+    <script src="index.js "></script>
 </body>
 
 </html>
