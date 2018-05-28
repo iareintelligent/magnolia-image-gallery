@@ -30,7 +30,7 @@ $("#imgDropdown").on("shown.bs.collapse", function(e) {
     $("#bg-fader").addClass("down");
 });
 
-$("imgDropdown").on("hidden.bs.collapse", function(e) {
+$("#imgDropdown").on("hidden.bs.collapse", function(e) {
     $("#bg-fader").removeClass("down");
 });
 
