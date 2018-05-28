@@ -23,6 +23,11 @@ $(".slider").slick({
 $("#imgDropdown").on("shown.bs.collapse", function(e) {
     console.log("firing");
     resizeTheSlider(".slider");
+    $("#bg-fader").addClass("down");
+});
+
+$("imgDropdown").on("hidden.bs.collapse", function(e) {
+    $("#bg-fader").removeClass("down");
 });
 
 $(".click-close").on("click", function() {
