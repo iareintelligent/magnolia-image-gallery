@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
+    "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-connect": "^5.5.0",
@@ -12,6 +13,7 @@
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
     "hover.css": "^2.3.1",
+    "jquery-awesome-cursor": "^0.3.1",
     "sassdoc": "^2.5.0"
   }
 }

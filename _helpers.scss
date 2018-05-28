@@ -1,0 +1,12 @@
+.cover {
+    top: 0;
+    left: 0;
+    right: 0;
+    &.row {
+        left: 15px;
+        right: 15px;
+    }
+    &.down {
+        bottom: 0;
+    }
+}
