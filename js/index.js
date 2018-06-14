@@ -1,3 +1,35 @@
+function is_touch_device() {
+    var prefixes = " -webkit- -moz- -o- -ms- ".split(" ");
+    var mq = function(query) {
+        return window.matchMedia(query).matches;
+    };
+
+    if (
+        "ontouchstart" in window ||
+        (window.DocumentTouch && document instanceof DocumentTouch)
+    ) {
+        return true;
+    }
+
+    // include the 'heartz' as a way to have a non matching MQ to help terminate the join
+    // https://git.io/vznFH
+    var query = ["(", prefixes.join("touch-enabled),("), "heartz", ")"].join(
+        ""
+    );
+    return mq(query);
+}
+
+function start_loader() {
+    $(".loader").addClass("d-flex");
+    // debugger;
+}
+
+function stop_loader() {
+    $(".loader")
+        .removeClass("d-flex")
+        .addClass("d-none");
+}
+
 var calculateAspectRatio = function calculateAspectRatio($image) {
     var ratio = $image.width() / $image.height();
     return ratio > 0 ? ratio : 1;
@@ -48,6 +80,13 @@ $(".click-icon-right").on("click", function() {
 
 $(window).on("load", function() {
     reRatio();
+    if (is_touch_device()) {
+        $("#click-zone").hide();
+        $(".image-gallery img")
+            .first()
+            .click();
+    }
+    stop_loader();
 });
 
 $(".image-gallery img").on("click", function() {
@@ -55,30 +94,4 @@ $(".image-gallery img").on("click", function() {
     $(".slider").slick("slickGoTo", $(this).data("index"), true);
 });
 
-function is_touch_device() {
-    var prefixes = " -webkit- -moz- -o- -ms- ".split(" ");
-    var mq = function(query) {
-        return window.matchMedia(query).matches;
-    };
-
-    if (
-        "ontouchstart" in window ||
-        (window.DocumentTouch && document instanceof DocumentTouch)
-    ) {
-        return true;
-    }
-
-    // include the 'heartz' as a way to have a non matching MQ to help terminate the join
-    // https://git.io/vznFH
-    var query = ["(", prefixes.join("touch-enabled),("), "heartz", ")"].join(
-        ""
-    );
-    return mq(query);
-}
-
-if (is_touch_device()) {
-    $("#click-zone").hide();
-    $(".image-gallery img")
-        .first()
-        .click();
-}
+start_loader();
