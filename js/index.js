@@ -78,4 +78,7 @@ function is_touch_device() {
 
 if (is_touch_device()) {
     $("#click-zone").hide();
+    $(".image-gallery img")
+        .first()
+        .click();
 }
