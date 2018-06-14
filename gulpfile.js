@@ -8,7 +8,7 @@ var gulp = require("gulp"),
     // gulp doesnt try to compile the partials except as indicted by the @import statements
     htmlSources = ["*.html"],
     jsSources = ["*.js"],
-    sassInput = "*.scss",
+    sassInput = "./styles/*.scss",
     cssOutput = "./assets/",
     sassOptions = {
         errLogToConsole: true,
@@ -16,8 +16,7 @@ var gulp = require("gulp"),
     };
 
 gulp.task("sass", function() {
-    gulp
-        .src(sassInput)
+    gulp.src(sassInput)
         .pipe(sourcemaps.init())
         .pipe(sass(sassOptions).on("error", sass.logError))
         .pipe(sourcemaps.write())
@@ -29,8 +28,7 @@ gulp.task("sass", function() {
 });
 
 gulp.task("sassdoc", function() {
-    gulp
-        .src(sassInput)
+    gulp.src(sassInput)
         .pipe(sassdoc())
         .resume();
 });
@@ -57,8 +55,7 @@ gulp.task("javascript", function() {
 });
 
 gulp.task("prod", ["sassdoc"], function() {
-    gulp
-        .src(sassInput)
+    gulp.src(sassInput)
         .pipe(sass({ outputStyle: "compressed" }))
         .pipe(autoprefixer())
         .pipe(gulp.dest(cssOutput));

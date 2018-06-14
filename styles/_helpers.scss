@@ -10,7 +10,7 @@
         bottom: 0;
     }
 }
-#imgDropdown.collapse.show {
+.collapse.show {
     display: flex !important;
 }
 
@@ -26,11 +26,35 @@
     transition: all 500ms ease;
 }
 
-.click-left:hover,
-.click-right:hover {
-    background: rgba(0, 0, 0, 0.25);
+button.click-arrow,
+button.click-close {
+    overflow: visible;
+    cursor: pointer;
+    background: 0 0 !important;
+    border: 0;
+    -webkit-appearance: none;
+    display: block;
+    outline: 0;
+    padding: 0;
+    z-index: 1046;
+    &.click-icon-left {
+        cursor: url("/pages/img/img-cursor-left.png"), auto !important;
+    }
+    &.click-icon-right {
+        cursor: url("/pages/img/img-cursor-right.png"), auto !important;
+    }
+    &.click-icon-close {
+        cursor: url("/pages/img/img-cursor-grid.png"), auto !important;
+    }
 }
 
 #bg-fader.down {
     background: rgba(0, 0, 0, 0.5);
+}
+
+.image-slider img {
+    max-height: 85vh;
+}
+.image-gallery:nth-child(4) {
+    padding-right: 0 !important;
 }

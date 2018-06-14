@@ -34,15 +34,15 @@ $("#imgDropdown").on("hidden.bs.collapse", function(e) {
     $("#bg-fader").removeClass("down");
 });
 
-$(".click-close").on("click", function() {
+$(".click-icon-close").on("click", function() {
     $("#imgDropdown").collapse("hide");
 });
 
-$(".click-left").on("click", function() {
+$(".click-icon-left").on("click", function() {
     $(".slider").slick("slickPrev");
 });
 
-$(".click-right").on("click", function() {
+$(".click-icon-right").on("click", function() {
     $(".slider").slick("slickNext");
 });
 
