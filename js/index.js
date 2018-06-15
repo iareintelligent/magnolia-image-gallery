@@ -60,6 +60,10 @@ $(".slider").slick({
 $("#imgDropdown").on("shown.bs.collapse", function(e) {
     resizeTheSlider(".slider");
     $("#bg-fader").addClass("down");
+    $(this).css({
+        "min-height": "100%",
+        "max-height": "100vh"
+    });
 });
 
 $("#imgDropdown").on("hidden.bs.collapse", function(e) {
