@@ -38,13 +38,16 @@ button.click-close {
     padding: 0;
     z-index: 1046;
     &.click-icon-left {
-        cursor: url("/pages/img/img-cursor-left.png"), auto !important;
+        cursor: url("//iareintelligent.github.io/magnolia-image-gallery/pages/img/img-cursor-left.png"),
+            auto !important;
     }
     &.click-icon-right {
-        cursor: url("/pages/img/img-cursor-right.png"), auto !important;
+        cursor: url("//iareintelligent.github.io/magnolia-image-gallery/pages/img/img-cursor-right.png"),
+            auto !important;
     }
     &.click-icon-close {
-        cursor: url("/pages/img/img-cursor-grid.png"), auto !important;
+        cursor: url("//iareintelligent.github.io/magnolia-image-gallery/pages/img/img-cursor-grid.png"),
+            auto !important;
     }
 }
 
