@@ -48,17 +48,17 @@ button.click-close {
 
 button.click-arrow.click-icon-left,
 button.click-close.click-icon-left {
-  cursor: url("/assets/img/img-cursor-left.png"), auto !important;
+  cursor: url("/pages/img/img-cursor-left.png"), auto !important;
 }
 
 button.click-arrow.click-icon-right,
 button.click-close.click-icon-right {
-  cursor: url("/assets/img/img-cursor-right.png"), auto !important;
+  cursor: url("/pages/img/img-cursor-right.png"), auto !important;
 }
 
 button.click-arrow.click-icon-close,
 button.click-close.click-icon-close {
-  cursor: url("/assets/img/img-cursor-grid.png"), auto !important;
+  cursor: url("/pages/img/img-cursor-grid.png"), auto !important;
 }
 
 #bg-fader.down {
