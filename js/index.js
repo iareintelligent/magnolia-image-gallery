@@ -90,6 +90,7 @@ $(window).on("load", function() {
             .first()
             .click();
     }
+    $(".touch-nav").removeClass("d-none");
     stop_loader();
 });
 
