@@ -41,6 +41,7 @@ var reRatio = function reRatio() {
 var resizeTheSlider = function resizeTheSlider(slider) {
     $(slider).resize();
     $(slider)[0].slick.setPosition();
+    $(".slick-dots").css("width", $(".slick-list").outerWidth());
 };
 
 $(".slider").slick({
@@ -89,7 +90,6 @@ $(window).on("load", function() {
             .click();
     }
     $(".touch-nav").removeClass("d-none");
-    $(".slick-dots").css("width", $(".slick-list").outerWidth());
     stop_loader();
 });
 
