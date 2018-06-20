@@ -19,10 +19,7 @@ function is_touch_device() {
     return mq(query);
 }
 
-function start_loader() {
-    $(".loader").addClass("d-flex");
-    // debugger;
-}
+function start_loader() {}
 
 function stop_loader() {
     $(".loader")
@@ -50,7 +47,8 @@ $(".slider").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    adaptiveHeight: true
+    adaptiveHeight: true,
+    dots: true
 });
 
 // because:
@@ -91,6 +89,7 @@ $(window).on("load", function() {
             .click();
     }
     $(".touch-nav").removeClass("d-none");
+    $(".slick-dots").css("width", $(".slick-list").outerWidth());
     stop_loader();
 });
 
@@ -98,5 +97,3 @@ $(".image-gallery img").on("click", function() {
     $("#imgDropdown").collapse("show");
     $(".slider").slick("slickGoTo", $(this).data("index"), true);
 });
-
-start_loader();
