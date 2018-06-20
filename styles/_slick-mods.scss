@@ -8,3 +8,11 @@ li[role="presentation"] {
 .slick-dotted.slick-slider {
     margin-bottom: 15px;
 }
+.faux-dots {
+    bottom: 0px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+}

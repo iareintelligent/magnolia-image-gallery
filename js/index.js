@@ -41,15 +41,14 @@ var reRatio = function reRatio() {
 var resizeTheSlider = function resizeTheSlider(slider) {
     $(slider).resize();
     $(slider)[0].slick.setPosition();
-    $(".slick-dots").css("width", $(".slick-list").outerWidth());
+    // $(".slick-dots").css("width", $(".slick-list").outerWidth());
 };
 
 $(".slider").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    adaptiveHeight: true,
-    dots: true
+    adaptiveHeight: true
 });
 
 // because:
